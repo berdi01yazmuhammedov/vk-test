@@ -1,0 +1,29 @@
+article {
+    cursor: pointer;
+    transition: opacity 0.3s;
+    max-width: 200px;
+    &:hover {
+        opacity: 0.5;
+    }
+    figure {
+        margin: 0 auto;
+        img {
+            
+        }
+    }
+    .rating {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+            font-size: 40px;
+        }
+        .desc {
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
