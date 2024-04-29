@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "./MovieCard.module.scss";
 import { Link } from "react-router-dom";
-const url = "https://via.assets.so/movie.png?id=1&q=95&w=200&h=270&fit=fill";
-const MovieCard = () => {
+const MovieCard = ({id,name, poster, rating, year, alternativeName}) => {
   return (
-    <Link to="/movies/:id">
+    <Link to={`/movies/${id}`}>
       <article>
         <figure>
-          <img src={url} alt="" />
+          <img src={poster.url} alt={alternativeName} width={200} height={270}/>
         </figure>
         <div className={styles.rating}>
-          <span>8.4</span>
+          <span>{rating.imdb}</span>
           <div className={styles.desc}>
-            <h4>Хороший, плохой, злой</h4>
-            <p>22 декабря 1966</p>
+            <h4>{name}</h4>
+            <p>{year}</p>
           </div>
         </div>
       </article>
